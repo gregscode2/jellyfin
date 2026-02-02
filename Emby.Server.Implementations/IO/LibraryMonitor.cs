@@ -443,7 +443,7 @@ namespace Emby.Server.Implementations.IO
             _libraryManager.ItemAdded -= OnLibraryManagerItemAdded;
             _libraryManager.ItemRemoved -= OnLibraryManagerItemRemoved;
 
-            foreach (var watcher in _fileSystemWatchers.Values.ToList())
+            foreach (var watcher in _fileSystemWatchers.Values)
             {
                 DisposeWatcher(watcher, false);
             }
